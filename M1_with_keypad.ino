@@ -37,6 +37,7 @@ void runMotor(unsigned long durationMs) {
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
   analogWrite(ENA, MOTOR_SPEED);
+  Serial.print(F("Dispensing the reward..."));
   delay(durationMs);
   stopMotor();
 }
