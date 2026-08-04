@@ -1,4 +1,4 @@
-# Roll-the-dice-Simulator-using-Arduino-Uno-
+# SHAKE MY BALLS ARDUINO GAME(RENAMED)
 
 ## Wiring (see diagram above)
 
