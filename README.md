@@ -13,6 +13,7 @@
 | L298N OUT1/OUT2 | → TT gear motor's two wires | Polarity only matters for spin direction |
 | L298N +12V/VM | External 4–9V supply (e.g. 4×AA pack), **not** the Arduino 5V pin | The TT motor draws more current than the Uno can safely source |
 | L298N GND | Shared with Arduino GND | Critical — common ground or the motor logic won't work |
+|RELAY MODULE | VCC -> 5v, GND -> GND, IN -> A0, NO -> positive of load, COM -> external battery source's positive|
 
 
 
