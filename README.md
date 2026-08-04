@@ -41,7 +41,7 @@ Press # to restart
 ```
 The motor does **not** run. It then just sits there — not accepting any key except `#`. Pressing any other key (letters, `*`, other digits) does nothing. Only pressing `#` sends it back to step 1 to start a brand new round.
 
-![Diagram](Screenshot_2026-08-02-17-48-40-37_40deb401b9ffe8e1df2f1cc5ba480b12.jpg)
+![Diagram](Screenshot_2026-08-04-16-17-00-53_40deb401b9ffe8e1df2f1cc5ba480b12.jpg)
 
 For Electric Shock Feature:
        [ STEP 1: ARDUINO CONTROL SIDE ]              |     [ STEP 2: HIGH-VOLTAGE STATIC SIDE ]
