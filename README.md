@@ -38,7 +38,7 @@ Screen shows "Congratulations / You Win!" and the motor spins for 3 seconds (you
 Screen shows:
 ```
 You Lose!
-HAHAHA!
+daddy will punish you!
 
 Press # to restart
 ```
@@ -95,45 +95,3 @@ For Electric Shock Feature:
                         [  Finger Pad ] [  Finger Pad ]
                         
                         *Note: Keep contacts on the SAME hand!*
-## Complete Connection Guide
-Here is the exact step-by-step wiring guide for your project, updated for a 5V DC Negative Ion Generator setup. This guide replaces the 12V battery block with a dedicated 5V power source for the generator while maintaining total electrical isolation.
-------------------------------
-## 🧱 Parts Inventory Needed
-
-* Logic Side:
-* Arduino Uno (powered by USB cable to a computer or separate power bank)
-   * Standard jumper wires (Male-to-Male or Male-to-Female)
-* The Switch:
-* 5V Single-Channel Relay Module
-* Static Side:
-* 5V DC Input Negative Ion Generator Module
-   * Dedicated 5V Power Supply for the generator (Either a 4x AA battery pack or a separate USB Power Bank with a hacked USB wire exposing the internal red and black power leads)
-* User Interface:
-* Two copper coins or aluminum foil blocks (to act as Finger Contact Pads A and B)
-
-------------------------------
-## 💻 Step 1: Wiring the Arduino Control Side (Low Voltage)
-This side handles the brain logic. It uses the Arduino's 5V power supply rail to operate the electromagnetic coil inside the relay module.
-
-   1. Power the Relay: Connect a jumper wire from the Arduino's 5V pin to the VCC (or pin marked +) on the relay module.
-   2. Ground the Relay: Connect a jumper wire from any Arduino GND pin to the GND (or pin marked -) on the relay module.
-   3. Signal Control Line: Connect a jumper wire from Arduino Digital Pin 2 (D2) to the IN (or SIG) pin on the relay module.
-
-At this stage, when you run code to toggle Pin D2 HIGH and LOW, you should hear a mechanical "click" inside the relay cube, and an on-board indicator LED on the relay should flash.
-------------------------------
-## ⚡ Step 2: Wiring the Isolated Static Generator Side (High Voltage)
-This side uses a completely independent power source. None of these wires should ever touch the Arduino board pins or the Arduino ground rails.
-
-   1. Direct Ground Link: Take the Negative (-) wire from your dedicated 5V static power source (e.g., the black wire of your 4x AA battery pack) and connect it directly to the Input Black wire of the Negative Ion Generator.
-   2. The Relay Break (Power In): Take the Positive (+) wire from your dedicated 5V static power source (e.g., the red wire of your battery pack) and route it to the relay module. Secure it into the screw terminal labeled COM (Common).
-   3. The Relay Output (Power Out): Cut a fresh piece of hookup wire. Screw one end into the relay module terminal labeled NO (Normally Open). Connect the other end of this wire directly to the Input Red wire of the Negative Ion Generator.
-
-------------------------------
-## 🖐️ Step 3: Wiring the High-Voltage Target Contacts
-The output wires from the generator emit the static charge. Handle these connections carefully during assembly.
-
-   1. Electrode A: Locate the primary thick high-voltage output lead coming out of the sealed generator brick. Solder or tape this securely to Finger Contact Pad A.
-   2. Electrode B: Locate the second high-voltage output lead (this is often a carbon fiber wire brush or a secondary colored wire). Solder or tape this wire securely to Finger Contact Pad B.
-   3. Safety Placement: Secure both contact pads to your project housing. Ensure they are placed side-by-side so the user can easily rest their index and middle finger of the same hand on them simultaneously.
-
-------------------------------
